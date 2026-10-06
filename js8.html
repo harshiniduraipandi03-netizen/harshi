@@ -57,12 +57,14 @@
         let soc = Number(document.getElementById('social').value);
 
         let total = tam+eng+mat+sci+soc;
-
+        let pre = total/5;
+        let percentage= (total/500)*100;
+        let grade;
+       
         function calculator(){
             let per = Number(document.getElementById("per").value);
-            console.log(per);
-            let grade;
-        let per = total/5;
+            console.log(pre);
+    
         
         }
         if (per>=90){
