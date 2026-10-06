@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <form action="" onsubmit="validation(); return false;">
+        <label for=""><b>Username:</b></label>
+        <input type="text" id="username"><br>
+        <label for=""><b>E-mail:</b></label>
+        <input type="email" id="email"><br>
+        <label for=""><b>Password:</b></label>
+        <input type="password" id="password"><br>
+        <label for=""><b>Phone number:</b></label>
+        <input type="tel" id="phone"><br>
+        <label for=""><b>Address:</b></label>
+        <input type="text" id="address"><br>
+        <label for=""><b>Gender</b>:</label>
+         <label for=""><b>Male</b></label>
+        <input type="radio" name= "gender" value="male" id="male"><br>
+         <label for=""><b>Female</b></label>
+        <input type="radio" name= "gender" value="female" id="female"><br>
+        <label for=""><b>Other</b></label>
+        <input type="radio" name="gender" value="other" id="other"><br>
+        <input type="Submit" value="Submit">
+    </form>
+        <script>
+            function validation(){
+                 let Username = document.getElementById("username").value;
+                 let Email = document.getElementById("email").value;
+                 let Password = document.getElementById("password").value;
+                 let Phone = document.getElementById("phone").value;
+                 let Address = document.getElementById("address").value;
+                 let Gender = document.querySelector('input[name="gender"]:checked').value;
+
+
+            console.log(Username);
+            console.log(Email);
+            console.log(Password);
+            console.log(Phone);
+            console.log(Address);
+            console.log(Gender);
+
+
+            }
+        </script>
+
+</body>
+</html>

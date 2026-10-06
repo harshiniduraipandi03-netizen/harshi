@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)file:///C:/Users/nehaa/Desktop/harshi/tabletaskjs.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial,;
+            /* background: #1a2a4a; */
+            padding: 20px;
+        }
+        .year-box{
+            background: wheat;
+            padding: 20px;
+            width: 800px;
+            margin: auto;
+            border: 8px solid #0b1b3d;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+        .month{
+            border: 1px solid #ccc;
+            padding: 5px;
+            text-align: center;
+        }
+        .month h4{
+            margin: 5px 0;
+            font-size: 13px;
+        }
+        .month table{
+            width: 100%;
+            font-size: 12px;
+        }
+        .month th{
+            padding: 4px;
+            color: black;
+        }
+        .month td{
+            padding: 3px;
+        }
+        .sunday{
+            color: #c0392b;
+        }
+        .c1 th{ background: #0020c6; color: black; }
+        .c2 th{ background: #c2c900; }
+        .c3 th{ background: #4dc3e8; }
+        .c4 th{ background: #a8e4a0; }
+        .c5 th{ background: #8a5cff; }
+        .c6 th{ background: #eaa8d8; }
+        .c7 th{ background: #8ab4f8; }
+        .c8 th{ background: #0a84ff; }
+        .c9 th{ background: #f0c8b8; }
+        .c10 th{ background: #e48ab8; }
+        .c11 th{ background: #8ae48a; }
+        .c12 th{ background: #a884f0; }
+
+        @media screen and (max-width: 768px) {
+
+            .year-box{
+                width: 95%;
+                padding: 1opx;
+                grid-template-columns: repeat(1, 1fr);
+                gap: 20px;
+            }
+            .month {
+                width: 29%;
+            }
+        }
+        @media screen and (max-width: 425px) {
+
+            .year-box{
+                width: 95%;
+                padding: 15px;
+                grid-template-columns: repeat(1, 1fr);
+            }
+            .month {
+                width: 100%;
+                margin-left: 0;
+                margin-bottom: 15px;
+
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="year-box" id="year-box">
+        <div class="month c1">
+            <h4>JANUARY</h4>
+            <table>
+                <tbody><tr><th>S</th><th>M</th><th>T</th><th>W</th><th>T</th><th>F</th><th>S</th></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td>1</td><td>2</td></tr>
+                <tr><td class="sunday">3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td></tr>
+                <tr><td class="sunday">10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td></tr>
+                <tr><td class="sunday">17</td><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td></tr>
+                <tr><td class="sunday">24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td></tr>
+                <tr><td class="sunday">31</td><td></td><td></td><td></td><td></td><td></td></tr>
+            </tbody></table>
+        </div>
+        <div class="month c2">
+            <h4>FEBRUARY</h4>
+            <table>
+                <tbody><tr><th>S</th><th>M</th><th>T</th><th>W</th><th>T</th><th>F</th><th>S</th></tr>
+                <tr><td></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
+                <tr><td class="sunday">7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td></tr>
+                <tr><td class="sunday">14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td></tr>
+                <tr><td class="sunday">21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td></tr>
+                <tr><td class="sunday">28</td><td></td><td></td><td></td><td></td></tr>
+            </tbody></table>
+        </div>
+        <div class="month c3">
+            <h4>MARCH</h4>
+            <table>
+                <tbody><tr><th>S</th><th>M</th><th>T</th><th>W</th><th>T</th><th>F</th><th>S</th></tr>
+                <tr><td></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
+                <tr><td class="sunday">7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td></tr>
+                <tr><td class="sunday">14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td></tr>
+                <tr><td class="sunday">21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td></tr>
+                <tr><td class="sunday">28</td><td>29</td><td>30</td><td>31</td><td></td><td></td><td></td></tr>
+            </tbody></table>
+        </div>
+         <script>
+        let cal = document.getElementById("year-box");
+
+        cal.innerHTML += `
+         <div class="month c4">
+            <h4>APRIL</h4>
+            <table>
+                <tr><th>S</th><th>M</th><th>T</th><th>W</th><th>T</th><th>F</th><th>S</th></tr>
+                <tr><td></td><td></td><td></td><td></td><td>1</td><td>2</td><td>3</td></tr>
+                <tr><td class="sunday">4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
+                <tr><td class="sunday">11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td></tr>
+                <tr><td class="sunday">18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td></tr>
+                <tr><td class="sunday">25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td></td></tr>
+            </table>
+        </div>
+            `;
+        </script>
+         <div class="month c4">
+            <h4>APRIL</h4>
+            <table>
+                <tbody><tr><th>S</th><th>M</th><th>T</th><th>W</th><th>T</th><th>F</th><th>S</th></tr>
+                <tr><td></td><td></td><td></td><td></td><td>1</td><td>2</td><td>3</td></tr>
+                <tr><td class="sunday">4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
+                <tr><td class="sunday">11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td></tr>
+                <tr><td class="sunday">18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td></tr>
+                <tr><td class="sunday">25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td></td></tr>
+            </tbody></table>
+        </div>
+            
+    
+        <div class="month c5">
+            <h4>MAY</h4>
+             <table>
+                <tbody><tr><th>S</th><th>M</th><th>T</th><th>W</th><th>T</th><th>F</th><th>S</th></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>1</td></tr>
+                <tr><td class="sunday">2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td></tr>
+                <tr><td class="sunday">9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td></tr>
+                <tr><td class="sunday">16</td><td>17</td><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td></tr>
+                <tr><td class="sunday">23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td></tr>
+                <tr><td class="sunday">30</td><td>31</td><td></td><td></td></tr>
+            </tbody></table>
+        </div>
+        <div class="month c6">
+            <h4>JUNE</h4>
+            <table>
+                <tbody><tr><th>S</th><th>M</th><th>T</th><th>W</th><th>T</th><th>F</th><th>S</th></tr>
+                <tr><td></td><td></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
+                <tr><td class="sunday">6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td></tr>
+                <tr><td class="sunday">13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td></tr>
+                <tr><td class="sunday">20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td></tr>
+                <tr><td class="sunday">27</td><td>28</td><td>29</td><td>30</td><td></td><td></td><td></td></tr>
+            </tbody></table>
+        </div>
+        <div class="month c7">
+            <h4>JULY</h4>
+            <table>
+                 <tbody><tr><th>S</th><th>M</th><th>T</th><th>W</th><th>T</th><th>F</th><th>S</th></tr>
+                <tr><td></td><td></td><td></td><td></td><td>1</td><td>2</td><td>3</td></tr>
+                <tr><td class="sunday">4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
+                <tr><td class="sunday">11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td></tr>
+                <tr><td class="sunday">18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td></tr>
+                <tr><td class="sunday">25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td></td></tr>
+            </tbody></table>
+        </div>
+         <div class="month c8">
+            <h4>AUGUST</h4>
+            <table>
+                 <tbody><tr><th>S</th><th>M</th><th>T</th><th>W</th><th>T</th><th>F</th><th>S</th></tr>
+                <tr><td></td><td></td><td></td><td></td><td>1</td><td>2</td><td>3</td></tr>
+                <tr><td class="sunday">4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
+                <tr><td class="sunday">11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td></tr>
+                <tr><td class="sunday">18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td></tr>
+                <tr><td class="sunday">25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td></td></tr>
+            </tbody></table>
+        </div>
+         <div class="month c9">
+            <h4>SEPTEMBER</h4>
+            <table>
+                 <tbody><tr><th>S</th><th>M</th><th>T</th><th>W</th><th>T</th><th>F</th><th>S</th></tr>
+                <tr><td></td><td></td><td></td><td></td><td>1</td><td>2</td><td>3</td></tr>
+                <tr><td class="sunday">4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
+                <tr><td class="sunday">11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td></tr>
+                <tr><td class="sunday">18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td></tr>
+                <tr><td class="sunday">25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td></td></tr>
+            </tbody></table>
+        </div>
+         <div class="month c10">
+            <h4>OCTOBER</h4>
+            <table>
+                 <tbody><tr><th>S</th><th>M</th><th>T</th><th>W</th><th>T</th><th>F</th><th>S</th></tr>
+                <tr><td></td><td></td><td></td><td></td><td>1</td><td>2</td><td>3</td></tr>
+                <tr><td class="sunday">4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
+                <tr><td class="sunday">11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td></tr>
+                <tr><td class="sunday">18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td></tr>
+                <tr><td class="sunday">25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td></td></tr>
+            </tbody></table>
+        </div>
+         <div class="month c11">
+            <h4>NOVEMBER</h4>
+            <table>
+                 <tbody><tr><th>S</th><th>M</th><th>T</th><th>W</th><th>T</th><th>F</th><th>S</th></tr>
+                <tr><td></td><td></td><td></td><td></td><td>1</td><td>2</td><td>3</td></tr>
+                <tr><td class="sunday">4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
+                <tr><td class="sunday">11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td></tr>
+                <tr><td class="sunday">18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td></tr>
+                <tr><td class="sunday">25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td></td></tr>
+            </tbody></table>
+        </div>
+         <div class="month c12">
+            <h4>DECEMBER</h4>
+            <table>
+                 <tbody><tr><th>S</th><th>M</th><th>T</th><th>W</th><th>T</th><th>F</th><th>S</th></tr>
+                <tr><td></td><td></td><td></td><td></td><td>1</td><td>2</td><td>3</td></tr>
+                <tr><td class="sunday">4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
+                <tr><td class="sunday">11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td></tr>
+                <tr><td class="sunday">18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td></tr>
+                <tr><td class="sunday">25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td></td></tr>
+            </tbody></table>
+        </div>
+    </div>
+
+    
+
+</body></html>

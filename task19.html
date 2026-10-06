@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .container{
+            background-color: palevioletred;
+            width: 100%;
+            padding: 20px;
+            height: 650px;
+            column-gap: 20px;
+            align-items: center;
+            gap: 25px;
+
+            /*grid-template-rows:300px 400px;
+            grid-template-columns:1fr 1fr 1fr;*/
+            /*display: grid;*/
+            /*grid-template-areas: 
+                "Header Header Header Header"
+                "Nav Nav Nav Nav"
+                "Main Main Main Main"
+                "Section Section Section Section"
+                "Article Article Article Article"
+                "Footer Footer Footer Footer"
+            ;*/
+            grid-template-rows: 8vh 10vh 40vh 40vh 500px 10vh;
+        }
+        .sub{
+            border: 2px solid black;
+            padding: 10px;
+            height: 100px;
+        }
+        .header
+            {grid-area:header;background-color: rgb(124, 40, 40);
+            font-size: 20px;
+            }
+        .nav
+            {grid-area:nav;background-color: rgb(72, 72, 164);}
+        .main
+            {grid-area:main;background-color:rgb(9, 124, 9);}
+        .section
+            {grid-area:section;background-color: rgb(112, 166, 3);}
+        .article
+            {grid-area:article;background-color: orchid;}
+        .footer
+            {grid-area:footer;background-color: rgb(152, 90, 10);}
+        
+            @media screen and (max-width:430){
+                .container{
+                    grid-template-areas: 
+                    "Header Header Header Header"
+                    "Nav Nav Nav Nav"
+                    "Main Main Main Main"
+                    "Section Section Section Section"
+                    "Article Article Article Article"
+                    "Footer Footer Footer Footer"
+                    ;
+                    grid-template-rows: 8vh 10vh 80vh 40vh auto 10vh;
+                }
+                
+            }
+
+    </style>
+</head>
+<div class="container">
+    <div class="sub header">Header: <!--Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Laborum est assumenda iure laudantium perferendis temporibus corporis ut.
+        Fugit esse cum, laboriosam aperiam adipisci eum iure repudiandae natus. Natus, quam impedit.--></div>
+    <div class="sub nav">Nav</div>
+    <div class="sub main">Main</div>
+    <div class="sub section">Section</div>
+    <div class="sub article">Article</div>
+    <div class="sub footer">Footer</div>
+
+</div>
+<body>
+    
+</body>
+</html>

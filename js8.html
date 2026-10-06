@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            gap: 50px;
+            padding: 20px; 
+        }
+        label{
+            display: inline-block;
+            width: 70px;
+            margin-bottom: 10px;
+        }
+        .input-side{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="my marks">
+    <label for="">Name :</label><input type="text" id="Harshini"><br>
+    <label for="">Tamil :</label><input type="number" id="tamil"><br>
+    <label for="">English :</label><input type="number" id="english"><br>
+    <label for="">Maths :</label><input type="number" id="maths"><br>
+    <label for="">Science :</label><input type="number" id="science" ><br>
+    <label for="">Social :</label><input type="number" id="social" ><br>
+    <button onclick="calculator()">Calculator</button>
+
+    <div style=" border:2px solid black; padding: 20px; width: 280px; background-color: blueviolet; margin-top: 10px; display: flex; flex-direction: column; gap: 2px;">
+        Name :<span id="harshini"></span><br>
+        Total :<span id="total"></span><br>
+        Sum :<span id="sum"></span><br>
+        Average :<span id="average"></span><br>
+        Percentage :<span id="percentage"></span><br>
+        Grade :<span id="grade"></span><br>
+     </div>
+     </div>
+    <script>
+        function calculator(per){
+        let name = document.getElementById('Harshini').value;
+        let tam = Number(document.getElementById('tamil').value);
+        let eng = Number(document.getElementById('english').value);
+        let mat = Number(document.getElementById('maths').value);
+        let sci = Number(document.getElementById('science').value);
+        let soc = Number(document.getElementById('social').value);
+
+        let total = tam+eng+mat+sci+soc;
+
+        function calculator(){
+            let per = Number(document.getElementById("per").value);
+            console.log(per);
+            let grade;
+        let per = total/5;
+        
+        }
+        if (per>=90){
+            grade= "A+ Grade";
+        }
+        else if (per >= 75){
+            grade="A Grade";
+        }
+        else if (per >= 50){
+            grade="B Grade";
+        }
+        else{
+            grade = "Fail";
+        }
+        
+
+        document.getElementById('harshini').innerHTML= name;
+        document.getElementById('total').innerHTML =total;
+        document.getElementById('sum').innerHTML =total;
+        document.getElementById('average').innerHTML =total/5;
+        document.getElementById('percentage').innerHTML =(total/500*100)+ "%";
+        document.getElementById('grade').innerHTML ="A Grade";
+
+     }
+
+    </script>
+
+</body>
+</html>

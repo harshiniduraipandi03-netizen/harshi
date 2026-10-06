@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="icon" type="image/png" href="./image/quality_icons.webp">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 10px;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+        form{
+            background-color: palevioletred;
+            width: 400px;
+            margin: 50px auto;
+            padding: 30px;
+            display: grid;
+            align-items: center;
+            /* display: none; */
+        }
+       #firstbox{
+            background-color:paleturquoise ;
+        }
+        .fs{
+            font-size: 20px;
+        }
+       
+    </style>
+</head>
+<body>
+    <button onclick= "document.getElementById('form').style.display='none';">
+
+        <span id="head" style="background-color: midnightblue;
+        border-radius: 50px;"><i class="fa-solid fa-house"></i></span>
+    </button>
+
+
+    <form method="GET" id="form">
+        <label for="">Name:</label>
+        <input type="text"name= "name="placeholder="Harshini" id="firstbox"class= "fs"><br>
+        <label for="">Age:</label>
+        <input type="number" name="age"placeholder="20" min="18" max="25"><br>
+        <label for="">Email:</label>
+        <input type="email" name="email" placeholder="harshiniduraipandi03@gmail.com"><br>
+        <label for=>"Password"</label>
+        <input type="password" name="password" placeholder="Har@2005"><br>
+        <label for="Phone number"></label>
+        <input type="tel" name="phone" placeholder="9345337206"><br>
+        <label for="">Aadhaar:</label>
+        <input type="text" name="aadhaar"placeholder="3355 9910 0304"required> <br>
+        <label for="">Gender</label>
+        <input type="radio" name= "gender"value="male">
+        <label for="">Male</label>
+        <input type="radio"name= "gender" value="female">
+        <label for="">Female</label>
+        <input type="radio" name="gender" value="other">
+        <label for="">Other</label> <br>
+        <input type="radio" name="gender" value="other">
+        <label for="">Course:</label> <br>
+        <label for="">Python</label>
+        <input type="checkbox" name="c1" id=""value= "python"> <br>
+        <label for="">Java</label>
+        <input type="checkbox"name= "c2" value="java"> <br>
+        <label for="">c++</label>
+        <input type="checkbox"name="c3" value="c++"> <br>
+        <label for="">Comments:</label>
+        <input type="textarea" name="comments" placeholder="Enter your comments here"><br>
+        <label for="Color"></label>
+        <select name="color" id=""><option value="green">Green</option>
+        </select>
+        <input type="submit">
+        <input type="Reset">
+
+       
+    </form>
+    <script>
+        
+    </script>
+    
+</body>
+</html>

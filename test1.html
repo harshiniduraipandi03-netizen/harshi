@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="file:///C:/Users/nehaa/Desktop/harshi/image/quality_icons.webp">
+    <title>Document</title>
+    <style>
+        *::after
+        *::before{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        nav{
+            width: 100%;
+            height: 10vh;
+            background-color: rgb(231, 150, 231);
+            display: flex;
+            align-items: center;
+            padding: 10px 5px;
+            margin: auto;
+        }
+        .logo{
+            /*background-color: palegreen;*/
+            width: 300px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            font-size: 40px;
+            font-weight: 400;
+            margin-left: 30px;
+            color: whitesmoke;
+            box-sizing: border-box;
+        }
+        .ul{
+            /*background-color: lightslategray;*/
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: flex;
+            width: auto;
+            height: auto;
+            position: relative;
+            right: 25%;
+            left: 20%;
+        }
+        .li{
+            /*background-color: gray;*/
+            margin-left: 20px;
+            list-style-type: none;
+            padding: 5px 10px;
+        }
+        .link{
+            text-decoration: none;
+            color:rgb(5, 59, 104) ;
+            /*background-color: rgb(8, 223, 223);*/
+            font-size: 23px;
+            position: relative;
+        }
+        span {
+            position: absolute;
+        }
+        .button1 {
+            right: 10%;
+        }
+        .button2 {
+           right: 5%;
+        }
+        .button1 .SignIn {
+            background-color: #e796e7;
+            border-radius: 5px;
+            padding: 10px;
+            color: #fff;
+            border: 1px solid #fff;
+            /*cursor: pointer;*/
+        }
+        .button2 .SignUp{
+            background-color: #fff;     
+            border-radius: 5px;
+            padding: 10px;
+            border: 1px solid #fff;
+            /*cursor: pointer;*/
+        }
+        .heading{
+            text-align: center;
+            padding-top: 120px;
+        }
+
+        .heading h1{
+            font-family: sans-serif;
+            font-weight: 800;
+            color: rgb(3, 123, 117);
+            font-size: 50px;   
+        }
+        .heading p{
+            font-size: 20px;
+            margin: 0;
+            font-family: sans-serif;
+        }
+       
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            NAVBAR
+        </div>
+        <ul class="ul">
+            <li class="li"><a href="" class="link">HOME</a></li>
+            <li class="li"><a href="" class="link">ABOUT</a></li>
+            <li class="li"><a href="" class="link">BLOG</a></li>
+            <li class="li"><a href="" class="link">CONTACT</a></li>
+
+        </ul>
+        <span class="button1">
+            <button class="SignIn">Sign In</button>
+        </span>
+        <span class="button2">
+            <button class="SignUp">Sign Up</button>
+        </span>
+    </nav> 
+    <div class="heading">
+        <h1>Navigation Bar</h1>
+        <p>HTML & CSS ONLY</p> 
+    </div> 
+</body>
+</html>

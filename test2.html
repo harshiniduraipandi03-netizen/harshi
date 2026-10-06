@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, sans-serif;
+        }
+        nav{
+            background-color: lightseagreen;
+            color: black;
+            padding: 20px;
+            text-align: center;
+        }
+        header{
+            background-color: palevioletred;
+            padding: 20px;
+            text-align: center;
+        }
+        .main-content{
+            max-width: 1000px;
+            width: 90%;
+            display: flex;
+            margin: auto;
+            gap: 20px;
+        }
+        .left-content{
+            
+            background-color: #eee;
+            padding: 20px;
+            border: 2px ;  
+            width: 650px;
+        }
+        .right-content{
+            width: 350px;
+            background-color: #ddd;
+            padding: 20px;
+            border: 2px;
+            justify-content: center;
+        }
+        .left-sub-container{
+           display: flex;
+           flex-wrap: wrap;
+           gap: 15px;
+           margin-top: 15px;
+           justify-content: space-between;
+        }
+        .sub-box{
+            flex: 1 1 280px;
+            min-height: 150px;
+            padding: 5px;
+            background-color: coral;
+        }
+        .right-sub-box{
+            width: 280px;   
+            height: 220px;
+            background-color: lightgreen;
+            padding: 20px;
+        }
+        footer{
+            background-color: purple;
+            color: whitesmoke;
+            padding: 25px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        @media( max-width: 768px){
+            .main-content{
+                flex-direction: column;
+            }
+            .left-sub-container{
+                flex-direction: column;
+            }
+            .sub-box, .right-sub-box{
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        Navigation
+    </nav>
+    <header>
+        Header
+    </header>
+    <main class="main-content">
+        <section class="left-content">
+            Left Content
+            <div class="left-sub-container">
+
+            <div class="sub-box">
+                Sub Content 1
+            </div>
+            <div class="sub-box">
+                Sub Content 2
+            </div>
+             </div>
+        </section>
+        <section class="right-content">
+            <div class="right-sub-box">
+                Sub Content
+            </div>
+
+        </section>
+
+    </main>
+    <footer>Footer</footer>
+
+</body>
+</html>

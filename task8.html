@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)file:///C:/Users/nehaa/Desktop/harshi/task8.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="file:///C:/Users/nehaa/Desktop/harshi/image/quality_icons.webp">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        *::after,
+        ::before{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        nav{
+            width:100% ;
+            height: 10vh;
+            background-color: gray;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            position: relative;
+        }
+        .logo{
+           /* background-color: aqua;*/
+            width: 300px;
+            height:100% ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            font-weight: 400;
+            margin-left: 40px;
+            color: #fff;
+        }
+        .ul{
+            /*background-color:palevioletred ;*/
+            padding:5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 700px;
+            height: 100%;
+        }
+        .li{
+           /* background-color:olivedrab ;*/
+            margin-left: 20px;
+            list-style-type: none;
+            padding:5px 15px;
+        }
+        .link{
+            text-decoration: none;
+            color: #fff;
+            font-size: 25px;
+           /*background-color: #f30808;*/
+           position: relative;
+        }
+        .link::before{
+            content: "";
+            background-color: lightseagreen;
+            display: inline-block;
+            width: 100%;
+            height: 2px;
+            position: absolute;
+            bottom: -10px;
+            width: 0%;
+            transition: all 0.5s linear 0s;
+        }
+        .link:hover::before{
+            width: 100%;
+        }
+        span{
+            background-color: #000;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: none;
+        }
+        img{
+            width: 30px;
+            height: 30px;
+        }
+        .menu-icon {
+            display: none;
+            font-size: 36px;
+            cursor: pointer;
+            color: white;
+
+        }
+        @media screen  and (max-width:640px){
+            nav{
+              position: relative;
+            }
+            .logo{
+                margin-left: 10px;
+                justify-content: center;
+            }
+            .ul{
+                position: absolute;
+                top: 10vh;
+                width: 100%;
+                display: block;
+                height: auto;
+                background-color: goldenrod;
+                left: auto;
+                transition: all 0.5s linear 0s;
+                margin-top: 0;
+            }
+            .li{
+                text-align: left;
+            }
+            span{
+                display: flex;
+                color: whitesmoke;
+                font-size: 32px;
+            }
+            .logo{
+                width: auto;
+                justify-content: start;
+            }
+            .menu-icon {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">GFG</div>
+        <ul id class="ul">
+        <li class="li"><a href="" class="link">HOME</a></li>
+        <li class="li"><a href="" class="link">ABOUT</a></li>
+        <li class="li"><a href="" class="link">SERIVCES</a></li>
+        <li class="li"><a href="" class="link">CONTACT</a></li>
+        </ul>
+        <span class="menu-icon"><i class="fa-solid fa-bars"onclick="toggle()"></i></span>
+    </nav>
+    <style>
+        .main{
+            background-color: pink;
+            width: 70%;
+            height: 70vh;
+            margin: auto;
+            display: flex;
+            padding:20px;
+        }
+        
+        article{
+            background-color:greenyellow ;
+            width: 50%;
+            height: 80%;
+            font-size: 20px;
+            padding: 30px;
+            border-right: 2px solid rgb(71, 101, 105);
+            text-shadow: 0px 0px 1px rgb(7, 6, 6);
+
+        }
+        section{
+            width: 50%;
+            height: 100%;
+            background-color:blueviolet;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #usain{
+            width: 300px;
+            height: 350px;
+            box-shadow: 2px -2px 5px 2px rgb(6, 0, 6);
+        }
+        @media screen and (max-width:1024px){
+            .main{
+                height: auto;
+                background: green;
+                display: block;
+            }
+            article{
+                width: 100%;
+            }
+            section{
+                width: 100%;
+                margin-top: 20px;
+            }
+        }
+        @media screen and (max-width:620px){
+            .main{
+                width: 100%;
+            }
+        }
+
+    </style>
+    <main class="main">
+        <article>
+            Usain St. Leo Bolt (/ˈjuːseɪn/ YOO-sayn;[9] born 21 August 1986) is a Jamaican retired sprinter. Widely regarded as the greatest sprinter of all time,[10][11][12] he is an eight-time Olympic gold medalist and the world record holder in the 100 metres, 200 metres, and 4 × 100 metres relay.
+
+Bolt is the only sprinter to win Olympic 100 m and 200 m titles at three consecutive Olympics (2008, 2012, and 2016). He also won two 4 × 100 relay gold medals. He gained worldwide fame for his double sprint victory in world record times at the 2008 Beijing Olympics, which made him the first person to hold both records since fully automatic time became mandatory.
+
+An eleven-time World Champion, Bolt won consecutive World Championship 100 m, 200 m and 4 × 100 metres relay gold medals from 2009 to 2015, with the exception of a 100 m false start in 2011.
+        </article>
+        <section>
+            <img src="./image/usain.jpg" alt="" id="usain">
+        </section>
+        </main>
+         <script>
+            let toggled = false;
+            function toggle(){
+                if(!toggled){
+                    toggled = true;
+                    document.getElementById("ul").style.left = "0%";
+                    return
+                }
+                if(toggled){
+                    toggled = false;
+                 
+                    document.getElementById("ul").style.left = "-100%";
+                      return
+                }
+            }
+
+        </script>
+</body>
+</html>
