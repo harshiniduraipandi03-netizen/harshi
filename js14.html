@@ -56,14 +56,23 @@ button{
 <img src="./image/fan-blades-png.jpg" id="blades" class="blades" alt="Fan Blade">
 
 
-<div>
-    <button onclick="fanOn()">ON</button>
-    <button onclick="fanOff()">OFF</button>
-</div>
 
+    <!-- <button onclick="fanOn()">ON</button>
+    <button onclick="fanOff()">OFF</button> -->
+    <div>
+
+    <button onclick="fanOn()">ON</button>
+
+    <button onclick="increaseSpeed()">+</button>
+
+    <button onclick="decreaseSpeed()">-</button>
+
+    <button onclick="fanOff()">OFF</button>
+
+</div>
 <script>
 const blades = document.getElementById("blades");
-
+let speed = 0.5
 function fanOn(){
     blades.classList.add("rotate");
 }
@@ -71,6 +80,23 @@ function fanOn(){
 function fanOff(){
     blades.classList.remove("rotate");
 }
+function increaseSpeed(){
+    speed= speed-0.1;
+    if(speed<0.1)
+    {
+        speed=0.1;
+    }
+    blades.style.animationDuration = speed + "s";
+}
+
+function decreaseSpeed()
+{
+    speed = speed + 0.1;
+
+    blades.style.animationDuration = speed + "s";
+}
+
+
 </script>
 
 </body>
