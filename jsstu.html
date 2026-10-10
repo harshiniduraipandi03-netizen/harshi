@@ -28,8 +28,6 @@ body {
     box-shadow: 0 5px 15px #0002;
 }
 
-/* Header */
-
 .header {
     background: linear-gradient(120deg, #0750aa, #03409a);
     color: white;
@@ -45,8 +43,6 @@ body {
 .header p {
     font-size: 15px;
 }
-
-/* Form */
 
 form {
     padding: 12px;
@@ -69,17 +65,17 @@ form {
     border-bottom: 1px solid #ddd;
 }
 
-.personal .section-title { background: #85b4ed; }
-.contact .section-title { background: #39dfaa; }
-.course .section-title { background: #e6ce63; }
-.education .section-title { background: #ea7d7d; }
-.skills .section-title { background: #a98cdf; }
-.additional .section-title { background: #76b0bf; }
-.terms .section-title { background: #8adb8a; }
+    .personal .section-title { background: #85b4ed; }
+    .contact .section-title { background: #39dfaa; }
+    .course .section-title { background: #e6ce63; }
+    .education .section-title { background: #ea7d7d; }
+    .skills .section-title { background: #a98cdf; }
+    .additional .section-title { background: #76b0bf; }
+    .terms .section-title { background: #8adb8a; }
 
-.section-content {
+    .section-content {
     padding: 14px 18px;
-}
+    }
 
 .fields {
     display: grid;
@@ -154,13 +150,9 @@ input[type="checkbox"] {
     cursor: pointer;
     flex-shrink: 0;
 }
-
-/* Main layout */
-
 .personal {
     width: 100%;
 }
-
 .layout {
     display: grid;
     grid-template-columns: 3fr 2.1fr;
@@ -181,8 +173,6 @@ input[type="checkbox"] {
     min-width: 0;
 }
 
-/* Contact */
-
 .contact-fields {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -193,15 +183,11 @@ input[type="checkbox"] {
     grid-column: 1 / -1;
 }
 
-/* Education */
-
 .education-fields {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 10px;
 }
-
-/* Skills */
 
 .skill-options {
     display: flex;
@@ -216,8 +202,6 @@ input[type="checkbox"] {
     font-size: 13px;
     cursor: pointer;
 }
-
-/* Upload */
 
 .upload-fields {
     display: grid;
@@ -243,8 +227,6 @@ input[type="checkbox"] {
     font-size: 12px;
 }
 
-/* Terms */
-
 .terms-row {
     display: flex;
     gap: 12px;
@@ -264,8 +246,6 @@ input[type="checkbox"] {
     text-decoration: underline;
     cursor: pointer;
 }
-
-/* Buttons */
 
 .buttons {
     background: #b9dcff;
@@ -298,8 +278,6 @@ button:hover {
     opacity: 0.85;
     transform: translateY(-1px);
 }
-
-/* Responsive Tablet */
 
 @media (max-width: 991px) {
     body {
@@ -335,8 +313,6 @@ button:hover {
         grid-column: 1 / -1;
     }
 }
-
-/* Responsive Mobile */
 
 @media (max-width: 767px) {
     body {
